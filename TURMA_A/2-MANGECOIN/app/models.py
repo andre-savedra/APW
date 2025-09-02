@@ -18,9 +18,11 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     phone = models.CharField(max_length=15,unique=True)
     photo = models.TextField(null=True, blank=True)
     creation_date = models.DateTimeField(auto_now_add=True)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name','email','cpf','rg','birth_date',
+    REQUIRED_FIELDS = ['name','cpf','rg','birth_date',
                        'address_street', 'address_district', 'address_number',
                        'address_zip_code', 'address_city', 'address_state', 
                        'address_country','phone']

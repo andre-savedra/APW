@@ -7,8 +7,8 @@ router = DefaultRouter()
 
 router.register(r'users', CustomUserView)
 router.register(r'tokens', TokenView)
-router.register(r'accounts', AccountView)
 router.register(r'accounts/tokens', AccountTokenView)
+router.register(r'accounts', AccountView)
 router.register(r'bets', BetsView)
 router.register(r'transactions', TransactionsView)
 
