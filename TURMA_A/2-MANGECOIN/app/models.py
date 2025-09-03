@@ -57,9 +57,14 @@ class AccountToken(models.Model):
     account_FK = models.ForeignKey(Account, related_name='AccountToken_account_FK', on_delete=models.CASCADE)    
     token_FK = models.ForeignKey(Token, related_name='AccountToken_token_FK', on_delete=models.CASCADE)    
     balance = models.DecimalField(max_digits=12, decimal_places=4)
+    
+    #garante unicidade entre conta + token
+    class Meta:
+        unique_together = ('account_FK', 'token_FK')
         
     def __str__(self):
         return f'{self.account_FK.id}-{self.token_FK.name}'
+    
     
 class Transactions(models.Model):
     account_FK = models.ForeignKey(Account, related_name='Transactions_account_FK', on_delete=models.CASCADE)    

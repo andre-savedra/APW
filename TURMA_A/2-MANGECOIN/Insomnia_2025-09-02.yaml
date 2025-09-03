@@ -113,7 +113,7 @@ collection:
             meta:
               id: req_ce66780fcc95482e99003d9ce387ffdf
               created: 1756852230518
-              modified: 1756852246655
+              modified: 1756864400586
               isPrivate: false
               description: ""
               sortKey: -1756852194386
@@ -121,6 +121,12 @@ collection:
             headers:
               - name: User-Agent
                 value: insomnia/11.4.0
+                id: pair_8c6ff64b89e046b0849ec643821ac708
+              - id: pair_97a651cb25fd45278dcbe412207a3f35
+                name: Authorization
+                value: " Token 1540ce0cbfca0d68d01adf9aa02c82a3392d3560"
+                description: ""
+                disabled: false
             settings:
               renderRequestBody: true
               encodeUrl: true
@@ -192,7 +198,7 @@ collection:
             meta:
               id: req_68b31d639df149739cd7c4ed7fe6e531
               created: 1756853120333
-              modified: 1756853133054
+              modified: 1756864418519
               isPrivate: false
               description: ""
               sortKey: -1756852194336
@@ -200,6 +206,12 @@ collection:
             headers:
               - name: User-Agent
                 value: insomnia/11.4.0
+                id: pair_48b00ae62b1646a4862aaeb30b4df1ff
+              - id: pair_6feb5fbdcc92487aace528755f44e812
+                name: Authorization
+                value: Token 1540ce0cbfca0d68d01adf9aa02c82a3392d3560
+                description: ""
+                disabled: false
             settings:
               renderRequestBody: true
               encodeUrl: true
@@ -370,7 +382,7 @@ collection:
             meta:
               id: req_4bd2822e11ac45a6a1655fa0f437848b
               created: 1756854959648
-              modified: 1756854963112
+              modified: 1756860710286
               isPrivate: false
               description: ""
               sortKey: -1756853692574
@@ -378,6 +390,77 @@ collection:
             headers:
               - name: User-Agent
                 value: insomnia/11.4.0
+                id: pair_7dd564f9bbb2427fad5b741fa9f4598b
+              - id: pair_183b9cc17366424ba6f63e891f2dda34
+                name: Authorization
+                value: Token 1540ce0cbfca0d68d01adf9aa02c82a3392d3560
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: AUTH
+        meta:
+          id: fld_b2a6febad52f44bf98c3fcb319316610
+          created: 1756860247725
+          modified: 1756860247725
+          sortKey: -1756860247725
+          description: ""
+        children:
+          - url: http://localhost:8000/api/auth/token/login/
+            name: LOGIN
+            meta:
+              id: req_0491282523c844fb93f301c3d264f851
+              created: 1756860252229
+              modified: 1756860422725
+              isPrivate: false
+              description: ""
+              sortKey: -1756860252229
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "fulano@senai.com",
+                	"password": "senaimange"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/token/logout/
+            name: LOGOUT
+            meta:
+              id: req_08b931915b914c9c9a93d3b3d4bf4c0c
+              created: 1756860621314
+              modified: 1756860657919
+              isPrivate: false
+              description: ""
+              sortKey: -1756857068812.5
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+                id: pair_4dd994cb0c154bfc9873f19f8b87a560
+              - id: pair_e32bc35e8b49430d941d99e179b4301b
+                name: Authorization
+                value: Token 1e89752d778d72cf67de4bc6dccbf53fb1215187
+                description: ""
+                disabled: false
             settings:
               renderRequestBody: true
               encodeUrl: true
