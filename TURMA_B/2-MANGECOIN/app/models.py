@@ -19,6 +19,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     photo = models.TextField(null=True, blank=True)
     creation_date = models.DateTimeField(auto_now_add=True)
 
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name', 'cpf', 'rg', 'birth_date', 
                        'address_country', 'address_state', 'address_city',
