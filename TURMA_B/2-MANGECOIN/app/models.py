@@ -61,6 +61,9 @@ class AccountToken(models.Model):
     token_FK = models.ForeignKey(Token, related_name='accountToken_token_FK', on_delete=models.CASCADE)
     balance = models.DecimalField(max_digits=15, decimal_places=2)
     
+    class Meta:
+        unique_together = ('account_FK', 'token_FK')
+
     def __str__(self):
         return f'{self.account_FK.user_FK.email}-{self.token_FK.code}'
 
