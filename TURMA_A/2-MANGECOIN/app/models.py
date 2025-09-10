@@ -31,7 +31,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
- 
+
 
 
 class Token(models.Model):
@@ -57,6 +57,7 @@ class AccountToken(models.Model):
     account_FK = models.ForeignKey(Account, related_name='AccountToken_account_FK', on_delete=models.CASCADE)    
     token_FK = models.ForeignKey(Token, related_name='AccountToken_token_FK', on_delete=models.CASCADE)    
     balance = models.DecimalField(max_digits=12, decimal_places=4)
+    # balance = models.FloatField()
     
     #garante unicidade entre conta + token
     class Meta:
