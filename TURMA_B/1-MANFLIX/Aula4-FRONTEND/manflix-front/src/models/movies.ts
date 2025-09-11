@@ -3,6 +3,7 @@ export class Director {
 }
 
 export class Movie {
+    id: number = 0;
     title: string = "";
     description: string = "";
     category: string = "";

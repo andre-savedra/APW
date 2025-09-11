@@ -4,7 +4,8 @@ export const  BASE_URL= import.meta.env.VITE_BACKEND_URL;
 
 export const getAxios = ()=>{
     const createdAxios = axios.create({
-        baseURL: process.env.NODE_ENV === "development"? "/backend-api" : BASE_URL,
+        // baseURL: process.env.NODE_ENV === "development"? "/backend-api" : BASE_URL,
+        baseURL: BASE_URL,
         timeout: 4000,        
     });
 

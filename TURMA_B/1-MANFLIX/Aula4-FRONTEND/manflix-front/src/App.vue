@@ -12,12 +12,41 @@ getMovies()
 </script>
 
 <template>
-  <h1>You did it!</h1>
+  <h1>Manflix</h1>
   <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
+    Lista de Filmes:
   </p>
-  <p>{{ allMovies }}</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Data de publicação</th>
+          <th>Foto</th>
+          <th>Classificação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(movie,id) in allMovies" :key="id">
+          <td>{{movie.id}}</td>
+          <td>{{movie.title}}</td>
+          <td>{{movie.description}}</td>
+          <td>{{movie.category}}</td>
+          <td>{{movie.published_date}}</td>
+          <td>
+            <img class="movie-image" :src="movie.photo" alt="Foto do filme">
+          </td>
+          <td>{{movie.classification}}</td>
+        </tr>
+      </tbody>
+    </table>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+  .movie-image{
+    height: 130px;
+    width: 120px;
+  }
+</style>
