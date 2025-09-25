@@ -1,0 +1,81 @@
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+*,
+html,
+body{
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        background-color: #CCCCCC;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #FFF;
+        background-image: -webkit-linear-gradient(90deg,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 25%,
+                transparent 100%,
+                rgba(0, 0, 0, 1) 75%,
+                transparent)
+    }
+}
+
+.manflix-flexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.manflix-flexcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/******** PRIMEVUE RESET *********/
+.primeFieldReset {
+    border: none !important;
+    box-shadow: none !important;
+
+    &::placeholder {
+        font-size: 14px;
+        font-family: 'NetflixSansRegular';
+    }
+
+    &::-ms-clear,
+    &::-ms-reveal {
+        display: none;
+    }
+}
+
+.p-password i {
+    width: auto;
+}
+
+
+//LOGIN PAGE
+.primeFieldPassword {
+    background-color: var(--background-field-color) !important;
+    color: white !important;
+
+    &::placeholder {
+        color: var(--placeholder-field-color);
+        padding-left: 10px;
+    }
+}
+
+
+
+
