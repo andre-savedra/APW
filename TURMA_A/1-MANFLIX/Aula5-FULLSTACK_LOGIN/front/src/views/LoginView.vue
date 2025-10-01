@@ -1,10 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
+import { useAuth } from 'vue-auth3';
+const auth = useAuth()
 
-const user = ref({
+const user = reactive({
     username: '',
     password: '',
 })
+
+const errorMessage = ref("");
+
+const login = ()=> {
+  console.log("trying to login... ", user);
+  auth.login({
+    data: {
+      email: user.username,
+      password: user.password
+    }, 
+    
+  }).catch(error=>{
+    errorMessage.value = "Login inválido!"
+    console.error("error: ", error);
+
+    setTimeout(()=>{
+    errorMessage.value = "";
+    },5000);
+  });
+}
 </script>
 
 <template>
@@ -13,7 +35,7 @@ const user = ref({
       <img class="manflixLogo" src="/manflix.png" alt="ManFlix" />
     </header>
     <div class="loginContainer manflix-flexcolumn">
-      <form v-on:submit.prevent="" class="login pl-4 pr-4 w-8 md:w-3">
+      <form v-on:submit.prevent="login" class="login pl-4 pr-4 w-8 md:w-3">
         <h2 class="mb-3 sm:mb-4">Login</h2>
         <input
           type="email"
@@ -30,7 +52,8 @@ const user = ref({
           placeholder="Password"
           v-model="user.password"
           v-on:input=""          
-        />        
+        />
+        <p v-if="errorMessage !== ''" class="error-message text-center">{{ errorMessage }}</p>        
         <button class="loginField buttonLogin mb-2 mt-5 h-2rem sm:h-3rem">
           Entrar
         </button>
@@ -51,6 +74,10 @@ const user = ref({
 <style lang="scss" scoped>
 $header-height: 10vh;
 $footer-height: 16vh;
+
+.error-message{
+  color: red;
+}
 
 main {
   width: 100vw;

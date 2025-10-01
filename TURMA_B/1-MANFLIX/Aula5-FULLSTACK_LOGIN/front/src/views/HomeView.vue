@@ -3,17 +3,16 @@ import { ref, type Ref } from 'vue';
 import type { Movie } from '../models/movies';
 import { getMovies } from '../services/movie.services';
 import { BASE_URL } from '../services/services.config';
+import { useAuth } from 'vue-auth3';
 
 const allMovies: Ref<Array<Movie>> = ref([]);
 
 getMovies()
   .then(response => allMovies.value = response)
   .catch(error => console.error("Error when getting movies: ", error))
-
 </script>
 
 <template>
-
   <main class="w-screen h-auto min-h-screen flex flex-column align-items-center justify-content-start">
     <section class="banner w-screen flex flex-row align-items-center justify-content-center">
       <div class="banner-info flex flex-row align-items-center justify-content-center">
@@ -55,7 +54,7 @@ getMovies()
           </section>
         </div>
       </div>
-    </section>
+    </section>    
   </main>
 
 </template>

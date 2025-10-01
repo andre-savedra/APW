@@ -16,13 +16,7 @@ const login = ()=> {
     data: {
       email: user.username,
       password: user.password
-    },
-    url: "/backend-api/api/auth/token/login/",
-    redirect: { path: "/home"},
-    remember: true,
-    staySignedIn: true,
-    fetchUser: true,
-    autoLogin: true,
+    }, 
     
   }).catch(error=>{
     errorMessage.value = "Login inválido!"

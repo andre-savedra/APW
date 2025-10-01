@@ -4,7 +4,21 @@ import router from './router'
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 
+import { createAuth } from 'vue-auth3';
+
+import driverAuthBasic from "vue-auth3/drivers/auth/basic"
+import driverHttpAxios from "vue-auth3/drivers/http/axios"
+
 const app = createApp(App)
+const auth = createAuth({
+  plugins: {
+    router,
+  },
+  drivers: {
+        auth: driverAuthBasic,
+        http: driverHttpAxios,    
+  },    
+})
 
 app.use(router)
 app.use(PrimeVue, {
@@ -12,6 +26,7 @@ app.use(PrimeVue, {
         preset: Aura
     }
 });
+app.use(auth)
 import "@/assets/global.scss";
 
 app.mount('#app')

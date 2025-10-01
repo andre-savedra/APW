@@ -10,7 +10,7 @@ class DirectorView(ModelViewSet):
 class MovieView(ModelViewSet):    
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
 class PlanView(ModelViewSet):    
     queryset = Plan.objects.all()
