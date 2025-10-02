@@ -10,9 +10,16 @@ const allMovies: Ref<Array<Movie>> = ref([]);
 getMovies()
   .then(response => allMovies.value = response)
   .catch(error => console.error("Error when getting movies: ", error))
+
+const auth = useAuth();
+
+const makeLogout = ()=>{
+  auth.logout();
+}
 </script>
 
 <template>
+  <button @click="makeLogout">BOTÃO LOGOUT</button>
   <main class="w-screen h-auto min-h-screen flex flex-column align-items-center justify-content-start">
     <section class="banner w-screen flex flex-row align-items-center justify-content-center">
       <div class="banner-info flex flex-row align-items-center justify-content-center">

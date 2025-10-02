@@ -15,9 +15,36 @@ const auth = createAuth({
     router,
   },
   drivers: {
-        auth: driverAuthBasic,
+        auth: {
+          ...driverAuthBasic,
+          request(auth,options,token:string){
+            options.headers = options.headers || {};
+            options.headers.Authorization = `Token ${token}`;
+            return options;
+          },
+          response(auth,{data}:any){
+            return data?.auth_token;
+          }
+        },
         http: driverHttpAxios,    
   },    
+  tokenDefaultKey: "auth_token",
+  loginData: {
+    url: "/backend-api/api/auth/token/login/",
+    method: "POST",
+    redirect: "/home",
+    fetchUser: true,
+  },
+  logoutData: {
+    url: "/backend-api/api/auth/token/logout/",
+    method: "POST",
+    redirect: "/login",
+  },
+  fetchData: {
+     url: "/backend-api/api/auth/users/me/",
+     method: "GET",
+     enabled: true,
+  }
 })
 
 app.use(router)
