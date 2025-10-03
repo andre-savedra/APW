@@ -1,16 +1,21 @@
 from rest_framework import serializers
 from ..models import Task, TaskStatus, TaskStatusImage
-# read 
-# write
 
-class TaskSerializer(serializers.ModelSerializer):
+class TaskReadSerializer(serializers.ModelSerializer):
     from .custom_user import CustomUserSerializer
-    from .equipment import EquipmentSerializer
+    from .equipment import EquipmentReadSerializer
 
     creator_FK = CustomUserSerializer()
     assignees_FK = CustomUserSerializer(many=True)
-    equipments_FK = EquipmentSerializer(many=True)
+    equipments_FK = EquipmentReadSerializer(many=True)
 
+    class Meta:
+        model = Task   #model de conversão
+        fields = '__all__' #todos os campos
+        many = True        #permite serialização de vários
+
+
+class TaskWriteSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Task   #model de conversão
         fields = '__all__' #todos os campos
