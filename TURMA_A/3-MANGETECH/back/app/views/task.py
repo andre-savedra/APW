@@ -12,14 +12,14 @@ class TaskView(ReadWriteSerializer, ModelViewSet):
     write_serializer_class = TaskWriteSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = TaskFilter
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
-    def get_queryset(self):
-        user = self.request.user
+    # def get_queryset(self):
+    #     user = self.request.user
 
-        if user.is_authenticated:
-            return Task.objects.all() if is_Admin(user.id) else \
-                   Task.objects.filter(creator_FK=user.id)
-        return Task.objects.none()
+    #     if user.is_authenticated:
+    #         return Task.objects.all() if is_Admin(user.id) else \
+    #                Task.objects.filter(creator_FK=user.id)
+    #     return Task.objects.none()
 
     
