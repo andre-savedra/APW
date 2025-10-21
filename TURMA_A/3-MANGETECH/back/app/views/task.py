@@ -12,7 +12,7 @@ class TaskView(ReadWriteSerializer, ModelViewSet):
     write_serializer_class = TaskWriteSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = TaskFilter
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     # def get_queryset(self):
     #     user = self.request.user
