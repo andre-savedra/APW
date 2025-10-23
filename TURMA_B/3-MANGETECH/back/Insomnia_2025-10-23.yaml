@@ -1,0 +1,601 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1742519074325
+  modified: 1742519074325
+  description: ""
+collection:
+  - name: SWAPI
+    meta:
+      id: fld_7d3eca053838447ab9149c7ab8eb7e27
+      created: 1742519089268
+      modified: 1742519089268
+      sortKey: -1742519089268
+      description: ""
+  - name: CMS
+    meta:
+      id: fld_818c242bcc954fe8963a7abb11dfcc36
+      created: 1743723949410
+      modified: 1743723949410
+      sortKey: -1743723949410
+      description: ""
+  - name: CMS
+    meta:
+      id: fld_9355d4a3d52c4dc796eee26dbc959cee
+      created: 1743723949410
+      modified: 1743723949410
+      sortKey: -1743723949410
+      description: ""
+  - name: QUBITRO
+    meta:
+      id: fld_163e56b7936c48b3a0884db1b1a733b9
+      created: 1747953357548
+      modified: 1747953357548
+      sortKey: -1747953357548
+      description: ""
+  - name: MANFLIX
+    meta:
+      id: fld_deeca5aae1564fa9824fc5bfe07e1605
+      created: 1755048703629
+      modified: 1755048703629
+      sortKey: -1755048703629
+      description: ""
+    children:
+      - name: MOVIES
+        meta:
+          id: fld_0252752fbc52423e8dde53bb9e2c521a
+          created: 1755048713037
+          modified: 1755048713037
+          sortKey: -1755048713037
+          description: ""
+      - name: DIRECTORS
+        meta:
+          id: fld_0c2524c4e1294504ae77e7b992a9f79c
+          created: 1755642682555
+          modified: 1755642682555
+          sortKey: -1755048708333
+          description: ""
+  - name: MANGECOIN
+    meta:
+      id: fld_3a86d37647e240e596207b982c4300b7
+      created: 1756852176179
+      modified: 1756852176179
+      sortKey: -1756852176179
+      description: ""
+    children:
+      - name: TOKENS
+        meta:
+          id: fld_840286a1c2c840c8a9eadb57c31f7afb
+          created: 1756852190675
+          modified: 1756852190675
+          sortKey: -1756852190675
+          description: ""
+      - name: ACCOUNTS
+        meta:
+          id: fld_f30d5bea5cb842d2bcf851753fb07aa3
+          created: 1756852964559
+          modified: 1756852964559
+          sortKey: -1756852183427
+          description: ""
+      - name: TRANSACTIONS
+        meta:
+          id: fld_122590aad3fa49b18b9f1c14a492d2dd
+          created: 1756853513820
+          modified: 1756853513820
+          sortKey: -1756853513820
+          description: ""
+      - name: Bets
+        meta:
+          id: fld_4483ad38a95d4d9aa81c333b31c844b3
+          created: 1756853865613
+          modified: 1756853865613
+          sortKey: -1756853865613
+          description: ""
+      - name: AUTH
+        meta:
+          id: fld_b2a6febad52f44bf98c3fcb319316610
+          created: 1756860247725
+          modified: 1756860247725
+          sortKey: -1756860247725
+          description: ""
+  - name: MANGETECH
+    meta:
+      id: fld_79df2b91cb2a4c94a736f80a6178d623
+      created: 1758849128311
+      modified: 1758849128311
+      sortKey: -1758849128311
+      description: ""
+    children:
+      - name: TASKS
+        meta:
+          id: fld_15f3e7d1ef6b4ebe9f8252dc9935a025
+          created: 1758849140342
+          modified: 1758849140342
+          sortKey: -1758849140342
+          description: ""
+        children:
+          - url: http://localhost:8000/api/tasks/
+            name: GET Tasks
+            meta:
+              id: req_4664a31e48214621824b2501e404ff8e
+              created: 1758849144482
+              modified: 1761261408471
+              isPrivate: false
+              description: ""
+              sortKey: -1758849144482
+            method: GET
+            parameters:
+              - id: pair_2ff20d5468f0468897ad7dd72abdf8f5
+                name: name
+                value: placa
+                description: ""
+                disabled: true
+              - id: pair_dee896b2f78d4650a01964d791e6347b
+                name: description
+                value: upgrade
+                description: ""
+                disabled: true
+              - id: pair_856b702eaa4445a1afb7e8c57c17b1a1
+                name: page
+                value: "2"
+                description: ""
+                disabled: true
+              - id: pair_f3856442349746928a1a837d2e10ce35
+                name: creation_date_after
+                value: 2025-09-24
+                description: ""
+                disabled: true
+              - id: pair_caa5137e6ef740029655a6522c3e0176
+                name: creation_date_before
+                value: 2025-09-30
+                description: ""
+                disabled: true
+              - id: pair_fcdb6e4550c94ea89396d9f7febc1b0b
+                name: urgency_level
+                value: LOW
+                description: ""
+                disabled: true
+              - id: pair_c7c45d96bb6e46f5b7ae0070fbb89b59
+                name: ordering
+                value: -creation_date
+                description: ""
+                disabled: true
+              - id: pair_a9a63e813eb349cb949e16431111906c
+                name: creator_FK
+                value: professor
+                description: ""
+                disabled: true
+            headers:
+              - name: User-Agent
+                value: insomnia/11.5.0
+                id: pair_9f56a84f3e2b4c929869ced1f464ec29
+              - id: pair_a2a999eae506407ebfdc58ef5dd1f782
+                name: Authorization
+                value: Token e8eceaf6e3cd333bcb8ed76f67937281b153132b
+                description: ""
+                disabled: true
+              - id: pair_42122dd593a84a9780fdde1c0e9439c7
+                name: Authorization
+                value: Token e8eceaf6e3cd333bcb8ed76f67937281b153132b
+                description: ""
+                disabled: true
+              - id: pair_f3851e23392f4bb698d0fa5f7fb80814
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYxMjYxNDU5LCJpYXQiOjE3NjEyNjEzOTksImp0aSI6IjIyYTM3MGE2MjVhNjQ0NjBiMTNkN2YzZmNiMjliMGEwIiwidXNlcl9pZCI6IjEifQ.mhzTG4nUklBkIrIut96qaeXDx0QVG7HhKHPp48dG6k0
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/task/
+            name: New TASK
+            meta:
+              id: req_b684bbf33f0349fda757325abee816c2
+              created: 1759454945042
+              modified: 1759883778537
+              isPrivate: false
+              description: ""
+              sortKey: -1757854698355.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"creator_FK": 2,
+                	"equipments_FK": [
+                		2
+                	],
+                	"responsibles_FK": [
+                		1
+                	],
+                	"name": "Resolver problema no projetor",
+                	"description": "Projetor está aquecendo e desligando.",
+                	"suggested_date": "2025-10-08T12:00:00-03:00",
+                	"urgency_level": "HIGH"
+                }
+            parameters:
+              - id: pair_cf356ea6b42f4f7495afa79b741e6638
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_391f938c9e39497e991c8ae83a1fe7d0
+              - name: User-Agent
+                value: insomnia/11.5.0
+                id: pair_9f56a84f3e2b4c929869ced1f464ec29
+              - id: pair_a2a999eae506407ebfdc58ef5dd1f782
+                name: Authorization
+                value: Token 2f63ad8e2a6db9c61fad0f86916d00001ba85b72
+                description: ""
+                disabled: true
+              - id: pair_42122dd593a84a9780fdde1c0e9439c7
+                name: Authorization
+                value: Token 2aa9f8f04eab08cec0416be27806a425b8ec97f8
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: EQUIPMENTS
+        meta:
+          id: fld_07948020d6b445d79dbce5913f4da8d2
+          created: 1758849493726
+          modified: 1758849493726
+          sortKey: -1758849493726
+          description: ""
+        children:
+          - url: http://localhost:8000/api/equipment/
+            name: Get Equipments
+            meta:
+              id: req_205044b41fb244c380cadde6f0af0acb
+              created: 1758849496612
+              modified: 1759445331118
+              isPrivate: false
+              description: ""
+              sortKey: -1758849496612
+            method: GET
+            parameters:
+              - id: pair_fec7309315aa401ea5558a15a8fd34b8
+                name: page
+                value: "2"
+                description: ""
+                disabled: true
+              - id: pair_2525f20918b34a59ac0970aa1ecd3f7d
+                name: offset
+                value: ""
+                description: ""
+                disabled: true
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/equipment/
+            name: New Equipment
+            meta:
+              id: req_c2890ab09e4d4419a3a9141bbaab2fa4
+              created: 1759445340748
+              modified: 1759447237993
+              isPrivate: false
+              description: ""
+              sortKey: -1758849320547
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {	
+                	"category_FK": 2,
+                	"environment_FK": 2,
+                	"name": "Torno Mazak",
+                	"code": "99955",
+                	"description": "Torno Mazak 5 eixos"	
+                }
+            parameters:
+              - id: pair_2a09627f472a413ba93720701bd4e9be
+                name: ""
+                value: ""
+                description: ""
+                disabled: true
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: ENVIRONMENT
+        meta:
+          id: fld_07804d127c544364b4e73396d6b10732
+          created: 1758849565642
+          modified: 1758849565642
+          sortKey: -1758849565642
+          description: ""
+        children:
+          - url: http://localhost:8000/api/environment/
+            name: New Request
+            meta:
+              id: req_b74be72d604547839ff77785225476d9
+              created: 1758849567713
+              modified: 1759445218318
+              isPrivate: false
+              description: ""
+              sortKey: -1758849567713
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: USERS
+        meta:
+          id: fld_e82f9d1e7ce74e86851c394833403a7c
+          created: 1759270631542
+          modified: 1759270631542
+          sortKey: -1759270631542
+          description: ""
+        children:
+          - url: http://localhost:8000/api/custom-user/1/
+            name: New Request
+            meta:
+              id: req_1c1d9c69098948faac21e76098db177c
+              created: 1759270637448
+              modified: 1759270650520
+              isPrivate: false
+              description: ""
+              sortKey: -1759270644357
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: LOGIN
+        meta:
+          id: fld_29a3313cc9cc4c7a9e059cc21b04a862
+          created: 1759448392774
+          modified: 1759448392774
+          sortKey: -1759448392774
+          description: ""
+        children:
+          - url: http://localhost:8000/api/auth/token/login/
+            name: LOGIN TOKEN
+            meta:
+              id: req_431ba909978948bf833fa474fdc55d5b
+              created: 1759448396350
+              modified: 1761086799445
+              isPrivate: false
+              description: ""
+              sortKey: -1759448396350
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "admin@admin.com",
+                	"password": "admin"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/token/login/
+            name: New Request professor
+            meta:
+              id: req_bbad899480d04fd889b906cfda24fae0
+              created: 1759879804340
+              modified: 1759879827315
+              isPrivate: false
+              description: ""
+              sortKey: -1759359520353.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "professor@senai.com",
+                	"password": "senaimange"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/token/logout/
+            name: LOGOUT TOKEN
+            meta:
+              id: req_a4caea264f4e4de8a0bcd45f74331a1f
+              created: 1761085375344
+              modified: 1761259101138
+              isPrivate: false
+              description: ""
+              sortKey: -1759403958351.75
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_f7ce5a534e194ae1a25d201d054f3d09
+              - id: pair_73e48be7860c44889e99561ca4692445
+                name: Authorization
+                value: Token e8eceaf6e3cd333bcb8ed76f67937281b153132b
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/jwt/create/
+            name: LOGIN JWT
+            meta:
+              id: req_13851d7777f74fd9aa79bf61eef98193
+              created: 1761086810549
+              modified: 1761086859111
+              isPrivate: false
+              description: ""
+              sortKey: -1759448396450
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"email": "admin@admin.com",
+                	"password": "admin"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/jwt/refresh/
+            name: REFRESH JWT
+            meta:
+              id: req_7bf1af6841e6465c8f4567edbdd5b695
+              created: 1761087485999
+              modified: 1761261239849
+              isPrivate: false
+              description: ""
+              sortKey: -1759448396400
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MTI2MTI3OCwiaWF0IjoxNzYxMjYxMTU4LCJqdGkiOiJkZmFmZjI3ZmMxNDE0M2I5YWE5Y2RmY2EyNmUzZjg1OSIsInVzZXJfaWQiOiIxIn0.3NK1negj23Zv1lLytoI7LdJdBsZObDJphorvb1jYPg8"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_56df5b152f984b53a0a489d4b86d5db0
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_7b9ef34f8ea74901981d2efaf3879147
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8000/api/auth/jwt/verify/
+            name: VERIFY JWT
+            meta:
+              id: req_52f485f5ff0a45258eed7057058a37d9
+              created: 1761088262665
+              modified: 1761088289327
+              isPrivate: false
+              description: ""
+              sortKey: -1759448396375
+            method: POST
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYxMDg4MzEzLCJpYXQiOjE3NjEwODgyNTMsImp0aSI6IjVlNTdjZWY1MDg1MjQxMWFhMzRjYzU3Y2JkYTE2OGI1IiwidXNlcl9pZCI6IjEifQ.ncSyq2JISGLwLFmKG_yiKxWAnL4YJbMsizwNeTWOF00"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_56df5b152f984b53a0a489d4b86d5db0
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_7b9ef34f8ea74901981d2efaf3879147
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742519080261
+    modified: 1743719586445
+  cookies:
+    - key: _auth_new_session
+      value: 828dfd15d9b288aa80f7dcec45a37f41
+      domain: api.contentful.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-03T22:32:46.153Z
+      lastAccessed: 2025-04-03T22:33:06.444Z
+      id: 10427cbf-e347-4f7a-978c-1e995b35aa93
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742519080180
+    modified: 1742519080180
+    isPrivate: false

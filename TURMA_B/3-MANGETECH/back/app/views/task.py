@@ -13,21 +13,21 @@ class TaskView(ReadWriteSerializer, ModelViewSet):
     queryset = Task.objects.all() #qual a tabela e a query
     read_serializer_class = TaskReadSerializer #qual o serializer
     write_serializer_class = TaskWriteSerializer #qual o serializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, OrderingFilter]    
     filterset_class = TaskFilters
     ordering_fields = '__all__'
 
-    # def get_queryset(self):
-    #     items = self.request.GET.items()
-    #     for item in items:
-    #         print(f'parameters: {item}')
-    #     user = self.request.user
-    #     #select * from Task WHERE creator_FK = user.id
-    #     if user.is_authenticated:
-    #         return Task.objects.all() if isAdmin(user.id) \
-    #             else Task.objects.filter(creator_FK=user.id)
-    #     return Task.objects.none()
+    def get_queryset(self):
+        items = self.request.GET.items()
+        for item in items:
+            print(f'parameters: {item}')
+        user = self.request.user
+        #select * from Task WHERE creator_FK = user.id
+        if user.is_authenticated:
+            return Task.objects.all() if isAdmin(user.id) \
+                else Task.objects.filter(creator_FK=user.id)
+        return Task.objects.none()
     
 
     def perform_create(self, serializer):

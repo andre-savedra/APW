@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders', #comunicação back-front (segurança)
     'rest_framework', #back como api
-    'rest_framework.authtoken', #autenticação via api
+    #'rest_framework.authtoken', #autenticação via token based
+    'rest_framework_simplejwt', #autenticação via JWT
     'djoser', #autorização e autenticação
     'app' #meu app da mangetech
 ]
@@ -147,8 +149,15 @@ REST_FRAMEWORK = {
     ],
     #configura que a autenticação padrão é por WebToken
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
+        #'rest_framework.authentication.TokenAuthentication', # tipo token based
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # tipo JWT
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
+}
+
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(minutes=2),
 }
