@@ -14,29 +14,47 @@ provider "azurerm" {
   }
 }
 
-resource "azurerm_resource_group" "andre_savedra_test_rg" {
-    name = "andre_savedra_test_rg"
+resource "azurerm_resource_group" "andre_savedra2_test_rg" {
+    name = "andre_savedra2_test_rg"
     location = "West Europe"  
 }
 
 
-resource "azurerm_service_plan" "andre_savedra_test_sp" {
-  name = "andre_savedra_test_sp"
-  resource_group_name = azurerm_resource_group.andre_savedra_test_rg.name
-  location = azurerm_resource_group.andre_savedra_test_rg.location
+resource "azurerm_service_plan" "andre_savedra2_test_sp" {
+  name = "andre_savedra2_test_sp"
+  resource_group_name = azurerm_resource_group.andre_savedra2_test_rg.name
+  location = azurerm_resource_group.andre_savedra2_test_rg.location
   sku_name = "S1"
   os_type = "Windows"
 }
 
-resource "azurerm_windows_web_app" "andre_savedra_test_app" {
-  name = "andre-savedra-test-app"
-  resource_group_name = azurerm_resource_group.andre_savedra_test_rg.name
-  location = azurerm_resource_group.andre_savedra_test_rg.location
-  service_plan_id = azurerm_service_plan.andre_savedra_test_sp.id
+resource "azurerm_windows_web_app" "andre_savedra2_test_app" {
+  name = "andre-savedra2-test-app"
+  resource_group_name = azurerm_resource_group.andre_savedra2_test_rg.name
+  location = azurerm_resource_group.andre_savedra2_test_rg.location
+  service_plan_id = azurerm_service_plan.andre_savedra2_test_sp.id
   site_config {
    always_on = false 
+  }
+  app_settings = {
+    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "true"
   }
 }
 
 
+resource "azurerm_windows_web_app_slot" "andre_savedra2_test_app_slot" {
+  name = "andre-savedra2-test-app-qa"
+  app_service_id = azurerm_windows_web_app.andre_savedra2_test_app.id
+  site_config {    
+  }  
+}
+
+
+# terraform init
+# terraform plan
+# terraform apply
+# npm install
+# npm run build
+# Compress-Archive -Path .\dist\* -DestinationPath .\dist.zip -Force
+# az webapp deploy --resource-group andre_savedra2_test_rg --name andre-savedra2-test-app --src-path .\dist.zip --type zip --slot andre-savedra2-test-app-qa
 
