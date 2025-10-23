@@ -50,3 +50,11 @@ resource "azurerm_windows_web_app_slot" "andre_savedra2_test_app_slot" {
 }
 
 
+# terraform init
+# terraform plan
+# terraform apply
+# npm install
+# npm run build
+# Compress-Archive -Path .\dist\* -DestinationPath .\dist.zip -Force
+# az webapp deploy --resource-group andre_savedra2_test_rg --name andre-savedra2-test-app --src-path .\dist.zip --type zip --slot andre-savedra2-test-app-qa
+
