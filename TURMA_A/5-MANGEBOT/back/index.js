@@ -175,5 +175,5 @@ app.post('/api/sign-in', (req, res) => res.status(200).send());
 
 app.use('/api/images', express.static('images'));
 
-app.listen(8081, () => console.log('Server listening on port 8081!'));
+app.listen(8082, () => console.log('Server listening on port 8082!'));
 
