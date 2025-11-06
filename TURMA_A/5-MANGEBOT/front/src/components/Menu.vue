@@ -21,10 +21,10 @@ const flag = computed(()=> currentLanguage.value == 'br'?  'br.png' : 'en.png');
 <template>
     <header class="flex flex-row align-items-center justify-content-start">
         <img src="/build-a-bot-logo.png" alt="robot logo">
-        <nav class="ml-5">
-          <RouterLink class="m-4" to="/">{{ $t('MENU.HOME') }}</RouterLink>
-          <RouterLink class="m-4" to="/cart">{{ $t('MENU.CART') }}</RouterLink>
-          <RouterLink class="m-4" to="/build">{{ $t('MENU.BUILD') }}</RouterLink>
+        <nav class="ml-5" id="nav-menu">
+          <RouterLink id="home-menu" class="m-4" to="/">{{ $t('MENU.HOME') }}</RouterLink>
+          <RouterLink id="cart-menu" class="m-4" to="/cart">{{ $t('MENU.CART') }}</RouterLink>
+          <RouterLink id="build-menu" class="m-4" to="/build">{{ $t('MENU.BUILD') }}</RouterLink>
           <img id="flag" :src="flag" alt="flag" @click="change">
         </nav>
     </header>
